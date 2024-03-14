@@ -23,4 +23,6 @@ inquirer
 
     console.log(chalk.magenta(`${fib}!`) + ` = ${chalk.red(sen.join("."))} = ${chalk.green.bold(res)}`);
   })
-  .catch();
+  .catch((err) => {
+    console.log(err);
+  });
