@@ -5,14 +5,14 @@ import http from "http";
 
 http.createServer((req, res) => {
   const fib = 5;
-  let res = 1, cc = fib, sen = []; // Resultado, Contador, Sentença
+  let resposta = 1, cc = fib, sen = []; // Resultado, Contador, Sentença
 
   do {
     sen.push(cc);
-    res *= cc;
+    resposta *= cc;
     cc--;
   } while (cc);
-  res.write(`${fib}! +  = ${sen.join(".")} = ${res}`);
+  res.write(`${fib}! +  = ${sen.join(".")} = ${resposta}`);
 
 	res.end();
 }).listen(5000, () => {
