@@ -8,7 +8,7 @@ http.createServer((req, res) => {
   var cont = 1;
 
   while (cont <= 10) {
-    res.write(`${cont} x ${num} = ${cont*num}`);
+    res.write(`<p>${cont} x ${num} = ${cont*num}</p>`);
     cont++;
   }
 
