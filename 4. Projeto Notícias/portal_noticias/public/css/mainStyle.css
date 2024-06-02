@@ -1,0 +1,224 @@
+/* Header */
+.exclamacao{
+color: red;
+}
+
+.navbar .container-fluid {
+  padding: 0.5rem 18rem;
+}
+
+/* Main */
+main {
+  min-height: 100vh;
+  margin: 0rem 18rem;
+}
+
+/* Main - Anúncio */
+.anuncio-renata {
+  width: 100%;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+}
+
+/* Main - Sobre */
+.section-sobre {
+  display: flex;
+  flex-wrap: nowrap; /* Valor variável -> media query */
+  gap: 4rem;
+  
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  
+  padding: 2.5rem 4rem;
+  border-radius: 1rem;
+}
+
+.section-sobre div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-sobre div p {
+  text-align: justify;
+}
+
+.section-sobre img {
+  border-radius: 1rem;
+}
+
+/* Main - Notícias */
+.section-noticias {
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+}
+
+/* Main - Notícias - Carrosel */
+.carousel .carousel-inner {
+  border-radius: 1rem;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 730px; /* Valor variável -> media query */
+}
+
+.carousel .carousel-inner .carousel-item .camadaEscura {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  background: rgb(0,0,0);
+  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 0%, rgba(0,212,255,0) 100%);
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  z-index: 2;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  text-align: left;
+  font-size: 4.125rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px black;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption p {
+  text-align: left;
+  font-size: 3.1rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Main - Notícias - Table Cards */
+.section-noticias-table {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.table-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: rgb(213, 169, 255);
+}
+
+.myCard {
+  display: flex;
+}
+
+.myCard img {
+  height: 250px;
+  aspect-ratio: 4 / 2.5;
+
+  border-radius: 1rem;
+}
+
+.myCard div {
+  padding: 1rem 2rem;
+}
+
+.myCard div h5 {
+  font-size: 2rem;
+}
+
+.myCard div p {
+  font-size: 1.5;
+}
+
+/* Main - Notícias - Table Anuncios */
+.table-anuncios div {
+  position: relative;
+  width: 300px;
+  height: 100%;
+
+  background-color: rgb(155, 255, 255);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  color: #fff;
+
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: hsl(210, 10%, 19%);
+  outline: 2px solid hsl(210, 9%, 31%);
+}
+
+.container {
+  display: grid;
+  row-gap: 1rem;
+  background-color: hsla(208, 100%, 97%, 0.005);
+}
+
+.row-division {
+  width: 100%;
+  height: 3px;
+  background-color: hsl(210, 9%, 31%);
+}
+
+.footer-titulo {
+  text-align: left;
+}
+
+.footer-titulo h2 {
+  font-size: 2.5rem;
+}
+
+.footer-contato {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 1rem;
+}
+
+.footer-contato i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.footer-contato i:hover {
+  color: hsl(39, 100%, 50%);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* FAQ */
+
+.link-faq {
+  cursor: pointer;
+  color: rgb(13,110,253);
+}
+
+.link-faq:hover {
+  color: hsl(216, 91%, 42%);
+}
+
+.modal-body p {
+  color: hsl(0, 0%, 61%);
+}
+
+.copyright {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .Glinha02 {
+    row-gap: 2rem;
+  }
+}
+
