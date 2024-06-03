@@ -1,0 +1,18 @@
+.titulo-noticia{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.legenda{
+    color: gray;
+    font-size: 30px;
+    font-weight: 110;
+}
+
+.foto-principal {
+    width: 80%;
+  
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  
