@@ -14,6 +14,7 @@ app.get("/", function (req, res) {
   res.sendFile(enderecoHome);
 });
 
+// Notícias
 app.get("/noticiaDs.html", function (req, res) {
   let enderecoDs = path.resolve("./view/noticiaDs.html");
   res.sendFile(enderecoDs);
@@ -32,6 +33,11 @@ app.get("/noticiaEnem.html", function(req, res) {
 app.get("/noticiaCampus.html", function(req, res) {
   let enderecoCampus = path.resolve("./view/noticiaCampus.html");
   res.sendFile(enderecoCampus);
+});
+
+app.get("/noticiaAdm.html", function(req, res) {
+  let enderecoAdm = path.resolve("./view/noticiaAdm.html");
+  res.sendFile(enderecoAdm);
 });
 
 app.listen(porta, () => console.log(`Rodando na porta ${porta}`));

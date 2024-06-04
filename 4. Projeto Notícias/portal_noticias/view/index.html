@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etec Alerta - Home</title>
+  <title>Etec Alerta! - Home</title>
   <link rel="shortcut icon" href="/img/eteclogosemtexto.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&family=Medula+One&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- Css -->
   <link rel="stylesheet" href="css/mainStyle.css">
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrapCss/main.css">
@@ -46,7 +48,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="#sobre">Sobre</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -54,10 +56,11 @@
                 Notícias
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="./noticiaEnem.html">Inscrição do Enem 2024!</a></li>
+                <li><a class="dropdown-item" href="./noticiaCampus.html">Maior feira tecnológica da América Latina</a></li>
+                <li><a class="dropdown-item" href="./noticiaMine.html">Servidor de Mine na ETEC-CT</a></li>
+                <li><a class="dropdown-item" href="./noticiaDs.html">2º DS quebrou tudo na SPF?</a></li>
+                <li><a class="dropdown-item" href="./noticiaAdm.html">A preocupante falta de professores na ETEC</a></li>
               </ul>
             </li>
           </ul>
@@ -76,26 +79,21 @@
 
     <img class="anuncio-renata" src="/img/anuncioRenata.jpeg" alt="Anúncio Renata">
 
-    <section class="section-sobre">
+    <section class="section-sobre" id="sobre">
       <div>
         <h1>SOBRE NÓS</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In quis adipisci autem possimus porro ad animi
-          tempora recusandae aperiam! Officiis facere deleniti ratione obcaecati incidunt praesentium omnis sed earum
-          quam velit, nostrum, ab in nam maxime eligendi recusandae. Numquam fuga porro ut possimus vero! Aliquid
-          perferendis illum consequatur! Laudantium, reiciendis?
+          Criado por <span class="exclamacaoCor">David Alexandre e Thiago Moreira</span>, jovens estudantes do 2º ano de <span class="exclamacaoCor">Desenvolvimento de Sistemas
+          da ETEC Cidade Tiradentes</span>. Iludidos pelo delírio de que DS Entramos na ETEC em Fevereiro de 2023!
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In quis adipisci autem possimus porro ad animi
-          tempora recusandae aperiam! Officiis facere deleniti ratione obcaecati incidunt praesentium omnis sed earum
-          quam velit, nostrum, ab in nam maxime eligendi recusandae. Numquam fuga porro ut possimus vero! Aliquid
-          perferendis illum consequatur! Laudantium, reiciendis?
+          Este site é um projeto escolar feito na aula de Programação Web II supervisionado pelos Professor Everson Bacceli
         </p>
       </div>
       <img src="/img/sobreEtecFoto.jpg" alt="Logo da ETEC CT">
     </section>
 
-    <section class="section-noticias">
+    <section class="section-noticias" id="noticia">
       <h3>Notícias Populares</h3>
 
       <div id="carouselExampleCaptions" class="carousel slide">
@@ -107,6 +105,7 @@
         </div>
 
         <div class="carousel-inner">
+
           <div class="carousel-item active">
             <a href="./noticiaDs.html">
               <img src="/img/imgSpf01.jpeg" class="d-block w-100" alt="...">
@@ -119,24 +118,27 @@
           </div>
           
           <div class="carousel-item">
-            <img src="/img/imgMine.avif" class="d-block w-100" alt="...">
-            <span class="camadaEscura"></span>
-            <div class="carousel-caption d-md-block">
-              <h5>Criado novo servidor do Mine na ETEC<span class="exclamacaoCor">!</span></h5>
-              <p>Entenda como entrar</p>
-            </div>
+            <a href="./noticiaMine.html">
+              <img src="/img/imgMine.avif" class="d-block w-100" alt="...">
+              <span class="camadaEscura"></span>
+              <div class="carousel-caption d-md-block">
+                <h5>Criado novo servidor do Mine na ETEC<span class="exclamacaoCor">!</span></h5>
+                <p>Entenda como entrar</p>
+              </div>
+            </a>
           </div>
+
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Voltar</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Próximo</span>
         </button>
       </div>
 
@@ -150,7 +152,9 @@
             <div class="myCard">
               <img src="img/imgEnem.webp" alt="...">
               <div>
-                <h5>Já se inscreveu no ENEM 2024? Corre<span class="exclamacaoCor">!</span></h5>
+                <a href="./noticiaEnem.html">
+                  <h5>Já se inscreveu no ENEM 2024? Corre<span class="exclamacaoCor">!</span></h5>
+                </a>
                 <p>As inscrições estão abertas e a oportunidade de garantir seu futuro acadêmico espera por você.</p>
                 <p><small class="text-body-secondary">Publicado em: 02/06/2024 10h29</small></p>
               </div>
@@ -161,7 +165,9 @@
             <div class="myCard">
               <img src="img/imgCampus.webp" alt="...">
               <div>
-                <h5>Cursos de Tecnologia vão pra maior feira tecnológica da América Latina<span class="exclamacaoCor">!</span></h5>
+                <a href="./noticiaCampus.html">
+                  <h5>Cursos de Tecnologia vão pra maior feira tecnológica da América Latina<span class="exclamacaoCor">!</span></h5>
+                </a>
                 <p>Uma seleção diversificada de cursos, desde programação até inteligência artificial, estará em destaque neste evento imperdível.</p>
                 <p><small class="text-body-secondary">Publicado em: 01/06/2024 12h40</small></p>
               </div>
@@ -172,7 +178,9 @@
             <div class="myCard">
               <img src="img/imgMine.avif" alt="...">
               <div>
-                <h5>Criado novo servidor do Mine na ETEC<span class="exclamacaoCor">!</span></h5>
+                <a href="./noticiaMine.html">
+                  <h5>Criado novo servidor do Mine na ETEC<span class="exclamacaoCor">!</span></h5>
+                </a>
                 <p>O que acha de um Minezinho depois de 6 aulas? É sua oportunidade.</p>
                 <p><small class="text-body-secondary">Publicado em: 26/05/2024 18h58</small></p>
               </div>
@@ -183,9 +191,24 @@
             <div class="myCard">
               <img src="img/imgSpf01.jpeg" alt="...">
               <div>
-                <h5>2º DS quebrou tudo na SPF?</h5>
+                <a href="./noticiaDs.html">
+                  <h5>2º DS quebrou tudo na SPF?</h5>
+                </a>
                 <p>Recentemente foi época de Semana Paulo Freire e pela 1ª vez dentro da ETEC e DS já veio abrindo um buraco no palco.</p>
                 <p><small class="text-body-secondary">Publicado em: 09/05/2024 10:22</small></p>
+              </div>
+            </div>
+
+            <span class="linha"></span>
+  
+            <div class="myCard">
+              <img src="img/imgFaltaDeProfessor.jpeg" alt="...">
+              <div>
+                <a href="./noticiaAdm.html">
+                  <h5>A preocupante falta de professores na ETEC</h5>
+                </a>
+                <p>Essa situação crítica tem impacto direto na qualidade do ensino e na formação profissional dos estudantes, que são o futuro da economia do estado.</p>
+                <p><small class="text-body-secondary">Publicado em: 03/06/2024 19:49</small></p>
               </div>
             </div>
           </div>
@@ -195,7 +218,9 @@
         </div>
 
         <div class="table-anuncios">
-          <div>Anúncios... (Se tiver)</div>
+          <img src="/img/anuncioVest01.jpeg" alt="Anuncio Vestibulinho">
+          <img src="/img/anuncioVest01.jpeg" alt="Anuncio Vestibulinho">
+          <img src="/img/anuncioVest02.jpeg" alt="Anuncio Vestibulinho">
         </div>
 
       </section>
@@ -228,8 +253,8 @@
         <div class="footer-nav col">
           <h2>Navegação</h2>
           <a href="#">Home</a>
-          <a href="#">Sobre</a>
-          <a href="#">Notícias</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#noticia">Notícias</a>
         </div>
 
         <div class="footer-nav col">
