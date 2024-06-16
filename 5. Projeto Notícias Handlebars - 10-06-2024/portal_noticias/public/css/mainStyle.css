@@ -1,0 +1,466 @@
+/* Header */
+.exclamacao{
+  color: red;
+  font-size: 4.2rem;
+}
+
+.exclamacaoCor {
+  color: red;
+}
+
+.navbar .container-fluid {
+  padding: 0.5rem 18rem;
+}
+
+.logo{
+  height: 8%;
+  width: 8%;
+}
+
+.navbar-brand h1{
+  font-family: "Medula One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+/* Main */
+main {
+  min-height: 100vh;
+  margin: 0rem 18rem;
+}
+
+/* Main - Anúncio */
+.anuncio-renata {
+  width: 100%;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+}
+
+/* Main - Sobre */
+.section-sobre {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* Valor variável -> media query */
+  gap: 4rem;
+  
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  
+  padding: 2.5rem 4rem;
+  border-radius: 1rem;
+}
+
+.section-sobre p{
+ font-size: 25px;
+}
+
+.section-sobre div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-sobre div p {
+  text-align: justify;
+}
+
+.section-sobre img {
+  width: 40%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Main - Notícias */
+.section-noticias {
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
+/* Main - Notícias - Carrosel */
+.carousel .carousel-inner {
+  border-radius: 1rem;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 730px; /* Valor variável -> media query */
+}
+
+.carousel .carousel-inner .carousel-item .camadaEscura {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  background: rgb(0,0,0);
+  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 0%, rgba(0,212,255,0) 100%);
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  z-index: 2;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  text-align: left;
+  font-size: 4.125rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px black;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption p {
+  text-align: left;
+  font-size: 3.1rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Main - Notícias - Table Cards */
+.table-cards button {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin-top: 3rem;
+}
+
+.section-noticias-table {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container-cards .linha {
+  width: 100%;
+  height: 2px;
+
+  background-color: rgb(187, 187, 187);
+}
+
+.container-cards .myCard {
+  display: flex;
+  align-items: center;
+}
+
+.table-cards .container-cards .myCard img {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 4 / 2.5;
+
+  border-radius: 0.5rem;
+}
+
+.container-cards .myCard div {
+  padding: 1rem 2rem;
+}
+
+.container-cards .myCard div h5 {
+  font-size: 2rem;
+}
+
+.container-cards .myCard div a {
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.container-cards .myCard div a:any-link {
+  color: #212529;
+}
+
+.container-cards .myCard div a:hover {
+  color: rgb(255, 83, 83);
+}
+
+.container-cards .myCard div p {
+  font-size: 1.5;
+}
+
+/* Main - Notícias - Table Anuncios */
+.table-anuncios {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.table-anuncios img {
+  position: relative;
+  width: 300px;
+  border-radius: 0.2rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  color: #fff;
+
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: hsl(210, 10%, 19%);
+  outline: 2px solid hsl(210, 9%, 31%);
+}
+
+.container {
+  display: grid;
+  row-gap: 1rem;
+  background-color: hsla(208, 100%, 97%, 0.005);
+}
+
+.row-division {
+  width: 100%;
+  height: 3px;
+  background-color: hsl(210, 9%, 31%);
+}
+
+.footer-titulo {
+  text-align: left;
+}
+
+.footer-titulo h2 {
+  font-family: "Medula One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.footer-contato {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 1rem;
+}
+
+.footer-contato i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.footer-contato i:hover {
+  color: rgb(255, 83, 83);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* FAQ */
+
+.link-faq {
+  cursor: pointer;
+  color: rgb(13,110,253);
+}
+
+.link-faq:hover {
+  color: hsl(216, 91%, 42%);
+}
+
+.modal-body p {
+  color: hsl(0, 0%, 61%);
+}
+
+.copyright {
+  text-align: left;
+}
+
+@media (max-width: 1600px) {
+  .navbar .container-fluid {
+    padding: 0.5rem 10rem;
+  }
+
+  main {
+    margin: 0rem 10rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 630px; /* Valor variável -> media query */
+  }
+
+  footer {
+    padding-right: 9rem;
+    padding-left: 9rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .section-sobre {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 1330px) {
+  .navbar .container-fluid {
+    padding: 0.5rem 8rem;
+  }
+
+  main {
+    margin: 0rem 8rem;
+  }
+
+  .section-noticias-table {
+    flex-wrap: wrap;
+  }
+
+  .section-noticias-table .table-anuncios {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .section-noticias-table .table-anuncios img {
+    width: 30%;
+  }
+
+  footer {
+    padding-right: 7rem;
+    padding-left: 7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel .carousel-inner .carousel-item img {
+    height: 530px; /* Valor variável -> media query */
+  }
+}
+
+@media (max-width: 1155px) {
+  .section-sobre {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .section-sobre img {
+    width: 100%;
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 3.125rem;
+  }
+  
+  .carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .navbar .container-fluid {
+    padding: 0.5rem 5rem;
+  }
+
+  main {
+    margin: 0rem 5rem;
+  }
+
+  footer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  footer #contato {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 870px) {
+  .navbar .container-fluid {
+    padding: 0.5rem 3rem;
+  }
+
+  main {
+    margin: 0rem 3rem;
+  }
+
+  .carousel {
+    margin-bottom: 6rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 430px; /* Valor variável -> media query */
+  }
+
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 2.5rem;
+  }
+  
+  .carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 2.1rem;
+  }
+  
+  .carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 1.5rem;
+  }
+
+  .container-cards .myCard {
+    flex-wrap: wrap;
+  }
+
+  .container-cards .myCard div {
+    padding: 0;
+    padding-top: 2rem;
+  }
+
+  .container-cards .myCard img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  footer #contato {
+    max-width: 100%;
+  }
+
+  .Glinha02 {
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar .container-fluid {
+    padding: 0.5rem 2rem;
+  }
+
+  main {
+    margin: 0rem 2rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 370px; /* Valor variável -> media query */
+  }
+
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer #contato .Glinha02 .col {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .section-sobre {
+    padding: 1.5rem;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    height: 330px; /* Valor variável -> media query */
+  }
+}
+
