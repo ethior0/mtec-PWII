@@ -1,58 +1,16 @@
-
-  <!-- HEADER -->
-  <nav class="navbar navbar-dark bg-dark">
-
-    <div class="container-fluid">
-      <img class="logo" src="/img/eteclogoBRANCO.png" alt="">
-
-      <a class="navbar-brand" href="#"><h1>ETEC ALERTA<span class="exclamacao">!</span></h1></a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ETEC Alerta<span class="exclamacaoCor">!</span></h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Notícias
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="./noticiaEnem.html">Inscrição do Enem 2024!</a></li>
-                <li><a class="dropdown-item" href="./noticiaCampus.html">Maior feira tecnológica da América Latina</a></li>
-                <li><a class="dropdown-item" href="./noticiaMine.html">Servidor de Mine na ETEC-CT</a></li>
-                <li><a class="dropdown-item" href="./noticiaDs.html">2º DS quebrou tudo na SPF?</a></li>
-                <li><a class="dropdown-item" href="./noticiaAdm.html">A preocupante falta de professores na ETEC</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Procurar..." aria-label="Search">
-            <button class="btn btn-primary" type="submit">Procurar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </nav>
+  {{> nav}}
 
   <!-- MAIN -->
   <main>
+    {{!-- {{#each noticias}}
+      <p>{{this.id}}</p>
+      <p>{{this.titulo}}</p>
+      <p>{{this.legendaCard}}</p>
+      <img src="{{this.imgCardSrc}}"></img>
+      <a href="{{this.linkNoticia}}">Ir pra próxima tela</a>
+      <p>{{this.descNoticia}}</p>
+      <p>{{this.dataPubli}}</p> 
+    {{/each}}  --}}
 
     <img class="anuncio-renata" src="/img/anuncioRenata.jpeg" alt="Anúncio Renata">
 
@@ -124,74 +82,25 @@
         <div class="table-cards">
 
           <h4>Outras Notícias</h4>
-          
-          <div class="container-cards">
-            <div class="myCard">
-              <img src="img/imgEnem.webp" alt="...">
-              <div>
-                <a href="./noticiaEnem.html">
-                  <h5>Já se inscreveu no ENEM 2024? Corre<span class="exclamacaoCor">!</span></h5>
-                </a>
-                <p>As inscrições estão abertas e a oportunidade de garantir seu futuro acadêmico espera por você.</p>
-                <p><small class="text-body-secondary">Publicado em: 02/06/2024 10h29</small></p>
-              </div>
-            </div>
-  
-            <span class="linha"></span>
-  
-            <div class="myCard">
-              <img src="img/imgCampus.webp" alt="...">
-              <div>
-                <a href="./noticiaCampus.html">
-                  <h5>Cursos de Tecnologia vão pra maior feira tecnológica da América Latina<span class="exclamacaoCor">!</span></h5>
-                </a>
-                <p>Uma seleção diversificada de cursos, desde programação até inteligência artificial, estará em destaque neste evento imperdível.</p>
-                <p><small class="text-body-secondary">Publicado em: 01/06/2024 12h40</small></p>
-              </div>
-            </div>
-  
-            <span class="linha"></span>
-  
-            <div class="myCard">
-              <img src="img/imgMine.avif" alt="...">
-              <div>
-                <a href="./noticiaMine.html">
-                  <h5>Criado novo servidor do Mine na ETEC<span class="exclamacaoCor">!</span></h5>
-                </a>
-                <p>O que acha de um Minezinho depois de 6 aulas? É sua oportunidade.</p>
-                <p><small class="text-body-secondary">Publicado em: 26/05/2024 18h58</small></p>
-              </div>
-            </div>
-  
-            <span class="linha"></span>
-  
-            <div class="myCard">
-              <img src="img/imgSpf01.jpeg" alt="...">
-              <div>
-                <a href="./noticiaDs.html">
-                  <h5>2º DS quebrou tudo na SPF?</h5>
-                </a>
-                <p>Recentemente foi época de Semana Paulo Freire e pela 1ª vez dentro da ETEC e DS já veio abrindo um buraco no palco.</p>
-                <p><small class="text-body-secondary">Publicado em: 09/05/2024 10:22</small></p>
-              </div>
-            </div>
 
-            <span class="linha"></span>
-  
-            <div class="myCard">
-              <img src="img/imgFaltaDeProfessor.jpeg" alt="...">
-              <div>
-                <a href="./noticiaAdm.html">
-                  <h5>A preocupante falta de professores na ETEC</h5>
-                </a>
-                <p>Essa situação crítica tem impacto direto na qualidade do ensino e na formação profissional dos estudantes, que são o futuro da economia do estado.</p>
-                <p><small class="text-body-secondary">Publicado em: 03/06/2024 19:49</small></p>
+          <div class="container-cards">
+            {{#each noticias}}
+              <div class="myCard">
+                <img src="{{this.imgCardSrc}}" alt="...">
+                <div>
+                  <a href="{{this.linkNoticia}}">
+                    <h5>{{this.titulo}}</h5>
+                  </a>
+                  <p>{{this.descNoticia}}</p>
+                  <p><small class="text-body-secondary">{{this.dataPubli}}</small></p>
+                </div>
               </div>
-            </div>
+
+              <span class="linha"></span>
+            {{/each}} 
           </div>
 
           <button class="btn btn-primary">Veja mais</button>
-
         </div>
 
         <div class="table-anuncios">
@@ -205,84 +114,5 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
 
-    <div class="container text-center" id="contato">
-      
-      <div class="row Glinha01">
-        <div class="footer-titulo col">
-          <h2>ETEC ALERTA<span class="exclamacaoCor">!</span></h2>
-        </div>
-
-        <div class="footer-contato col">
-          <i class='bx bxl-facebook-circle' ></i>
-          <i class='bx bxl-google' ></i>
-          <i class='bx bxl-github' ></i>
-          <i class='bx bxl-instagram-alt' ></i>
-          <i class='bx bxl-twitter' ></i>
-        </div>
-      </div>
-
-      <span class="row-division"></span>
-
-      <div class="row Glinha02">
-        <div class="footer-nav col">
-          <h2>Navegação</h2>
-          <a href="#">Home</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#noticia">Notícias</a>
-        </div>
-
-        <div class="footer-nav col">
-          <h2>Suporte</h2>
-          <a class="link-faq" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            FAQ
-          </a>
-          <!-- Modal FAQ -->
-          <div class="modal fade" id="staticBackdrop" data-bs-theme="dark" data-bs-backdrop="static"
-            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">FAQ</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <h6>1. Qual o próposito do site?</h6>
-                  <p>Um jornal para estudantes! Coisas que nos interessem e também coisas que acontecem na ETEC CT.</p>
-                  <h6>2. Qual a veracidade das notícias?</h6>
-                  <p>100% sem fake news!</p>
-                  <h6>3. Porque o site se chama "ETEC Alerta!"?</h6>
-                  <p>... Preciso responder?</p>
-                  <h6>4. Melhor curso?</h6>
-                  <p>DS</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="#">Contato</a>
-          <a href="#">Copyright</a>
-        </div>
-
-        <div class="footer-nav col">
-          <h2>Fale com nossa assessoria de imprensa:</h2>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua mensagem ..."
-              rows="3"></textarea>
-          </div>
-          <input class="btn btn-primary" type="submit" value="Enviar">
-        </div>
-      </div>
-
-    </div>
-
-  </footer>
+  {{> footer}}
