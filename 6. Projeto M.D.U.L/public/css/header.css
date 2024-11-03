@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+
+  padding: 0.5rem var(--padding-x);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  width: 90px;
+}
+
+.header-btn-entrar {
+  color: #fff;
+
+  padding: 0.5rem 2.5rem;
+
+  background-color: #48A990;
+  border-radius: 10px;
+  border: none;
+}
