@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+
+  padding: 0.5rem var(--padding-x);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  width: 90px;
+}
+
+.header-btn-entrar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--branco);
+  font-family: "Lobster", sans-serif;
+  font-size: 1.375rem;
+
+  padding: 0.5rem 2.75rem 0.5rem 2rem;
+
+  background-color: var(--verde-padrao);
+  border-radius: 10px;
+  border: none;
+}
+
+.header-btn-entrar:hover {
+  background-color: var(--verde-medio);
+}

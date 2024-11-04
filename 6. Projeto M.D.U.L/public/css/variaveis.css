@@ -1,0 +1,21 @@
+:root {
+  --padding-x: 2.5rem;
+
+  --branco: #fff;
+  --cinza-claro: #F6F6F5;
+  --cinza-escuro: #313131;
+  --preto: #000;
+
+  --verde-lima: #C0EC63;
+  --verde-claro: #ACFFEA;
+  --verde-padrao: #48A990;
+  --verde-medio: #309279;
+  --verde-escuro: #0C4839;
+
+  --card-verde: #12CA58;
+  --card-ciano: #20CDB9;
+  --card-azul: #438CF9;
+  --card-verde-claro: #A0EABC;
+  --card-ciano-claro: #A6EBE3;
+  --card-azul-claro: #B4D1FD;
+}
