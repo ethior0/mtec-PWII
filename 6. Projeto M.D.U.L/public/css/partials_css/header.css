@@ -26,6 +26,8 @@
   background-color: var(--verde-padrao);
   border-radius: 10px;
   border: none;
+
+  cursor: pointer;
 }
 
 .header-btn-entrar:hover {
