@@ -1,0 +1,133 @@
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--cinza-branco);
+}
+
+/* LOGIN ------------------------------------------------------- */
+.container-login {
+  width: 990px;
+
+  display: flex;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Login parte esquerda */
+.login {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 3rem;
+  background-color: var(--branco);
+}
+
+.login label {
+  color: var(--cinza-medio);
+  margin-top: 1.5rem;
+}
+
+.login input {
+  width: 100%;
+
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-bottom: 1px solid var(--cinza-medio);
+}
+
+.login input::placeholder {
+  color: var(--cinza-medio);
+  opacity: 0.5;
+}
+
+.login a img {
+  width: 54px;
+}
+
+/* .login-body{
+  width: 90%;
+  margin: 0 auto;
+} */
+
+.login-body-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.login-body-info h2 {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+}
+
+.login-body-info h5 {
+  color: var(--cinza-escuro);
+  font-size: 1.375rem;
+  text-align: center;
+
+  margin-bottom: 0;
+}
+
+.btn-form {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--branco);
+  font-family: "Lobster", sans-serif;
+  font-size: 1.375rem;
+
+  padding: 0.25rem 2rem 0.25rem 2rem;
+
+  background-color: var(--verde-padrao);
+  border-radius: 10px;
+  border: none;
+
+  margin-top: 4rem;
+}
+
+.btn-form:hover {
+  background-color: var(--verde-medio);
+}
+
+.p-conta {
+  text-align: center;
+
+  margin-top: 6rem;
+  margin-bottom: 0rem;
+}
+
+.p-conta button {
+  color: var(--preto);
+  font-weight: 500;
+  text-decoration: underline !important;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Login parte direita */
+.login-img, .cadastro-img {
+  width: 50%;
+  background-color: var(--verde-padrao);
+}
+
+/* CADASTRO ---------------------------------------------------- */
+
+.hidden {
+  display: none;
+}
