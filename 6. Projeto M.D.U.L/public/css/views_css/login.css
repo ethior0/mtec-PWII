@@ -131,3 +131,9 @@ body {
 .hidden {
   display: none;
 }
+
+.error-text {
+  font-size: 0.625rem;
+  color: rgb(255, 96, 96);
+  margin-top: 0.25rem;
+}
