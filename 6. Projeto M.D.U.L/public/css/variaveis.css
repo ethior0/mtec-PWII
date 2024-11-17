@@ -1,5 +1,6 @@
 :root {
   --padding-x: 2.5rem;
+  --transicao: 0.5s ease;
 
   --branco: #fff;
   --cinza-branco: #F2F2F2;

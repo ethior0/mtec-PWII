@@ -28,6 +28,7 @@
   border: none;
 
   cursor: pointer;
+  transition: var(--transicao);
 }
 
 .header-btn-entrar:hover {
