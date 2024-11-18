@@ -1,0 +1,37 @@
+/* SOBRE ---------------------------------------- */
+.sobre {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  padding: 0rem calc(var(--padding-x) + 4rem);
+
+  margin: 4rem 0rem 4rem 0rem;
+}
+
+.sobre-body {
+  width: 50%;
+}
+
+.sobre-body h1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 4rem;
+}
+
+.sobre-body h3 {
+  font-size: 2rem;
+  color: var(--cinza-escuro);
+  margin-bottom: 2rem;
+}
+
+.sobre-body p {
+  text-align: justify;
+}
+
+.sobre img {
+  width: 500px;
+  border-radius: 25rem 25rem 0 0;
+}

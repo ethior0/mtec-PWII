@@ -39,8 +39,8 @@ app.post('/login', async (req, res) => {
     const resultado = await inserirUsuario(email, senha, nome, telefone, dataNascimento);
     res.json({ message: 'Usuário inserido com sucesso!', resultado });
   } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: 'Erro ao inserir usuário.', error: err.message });
+    console.error(err);
+    res.status(500).json({ message: 'Erro ao inserir usuário.', error: err.message });
   }
 });
 

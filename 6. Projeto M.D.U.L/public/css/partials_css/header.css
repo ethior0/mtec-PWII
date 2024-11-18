@@ -8,6 +8,19 @@
   justify-content: space-between;
 }
 
+.header .navbar-nav {
+  gap: 1rem;
+}
+
+.header .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-item .nav-link {
+  color: var(--preto);
+}
+
 .header-logo img {
   width: 90px;
 }

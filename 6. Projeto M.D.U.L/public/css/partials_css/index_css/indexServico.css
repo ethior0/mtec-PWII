@@ -1,0 +1,67 @@
+/* Serviços ---------------------------------------- */
+.servico {
+  width: 100%;
+  height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  padding: 0rem calc(var(--padding-x) + 4rem);
+
+  background: linear-gradient(to bottom, var(--verde-padrao) 0, var(--verde-padrao) 33%, var(--verde-medio) 33%, var(--verde-medio) 66%, var(--verde-padrao) 66%, var(--verde-padrao) 100%);
+
+  margin: 4rem 0rem 4rem 0rem;
+}
+
+.servico-card {
+  width: 250px;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  background-color: var(--card-servico);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10rem;
+}
+
+.servico-card .icone {
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.servico-card .verde {
+  background-color: var(--card-verde);
+}
+
+.servico-card .ciano {
+  background-color: var(--card-ciano);
+}
+
+.servico-card .azul {
+  background-color: var(--card-azul);
+}
+
+.servico-card .servico-card-body {
+  text-align: center;
+}
+
+.servico-card .servico-card-body h5 {
+  color: var(--verde-escuro);
+  font-weight: 600;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.servico-card .servico-card-body p {
+  color: var(--cinza-escuro);
+  font-size: 1.25rem;
+  margin: 0;
+}

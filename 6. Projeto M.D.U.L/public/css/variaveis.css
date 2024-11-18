@@ -1,5 +1,5 @@
 :root {
-  --padding-x: 2.5rem;
+  --padding-x: 3rem;
   --transicao: 0.5s ease;
 
   --branco: #fff;
@@ -15,6 +15,7 @@
   --verde-medio: #309279;
   --verde-escuro: #0C4839;
 
+  --card-servico: #D3FFF4;
   --card-verde: #12CA58;
   --card-ciano: #20CDB9;
   --card-azul: #438CF9;

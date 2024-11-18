@@ -104,6 +104,11 @@ class Login {
 
       inputs2.classList.remove("hidden");
       this.btnCadastrar.classList.remove("hidden");
+
+      /* Porquisse (arrumar depois) =) */
+      const msg = document.querySelector(".trocar-text");
+      msg.innerText = ""
+      this.btnMudarTela.innerHTML = "";
     }
   }
 
