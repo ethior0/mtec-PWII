@@ -13,6 +13,11 @@ footer p {
   background-color: var(--verde-padrao);
 }
 
+.logotipo-footer{
+  width: 90px;
+}
+
+
 /* Footer 1 Header */
 .footer-1-header {
   display: flex;

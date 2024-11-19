@@ -115,7 +115,7 @@ body {
   margin-bottom: 0rem;
 }
 
-.p-conta button {
+.p-conta a {
   color: var(--preto);
   font-weight: 500;
   text-decoration: underline !important;

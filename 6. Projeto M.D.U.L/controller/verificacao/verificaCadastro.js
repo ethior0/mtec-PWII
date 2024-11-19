@@ -1,6 +1,6 @@
 export class VerificaCadastro{
   constructor() {
-    console.log("Iniciei a verificação");
+    console.log("Iniciei a verificação do cadastro");
   }
 
   verificaTela1(inputs) {
@@ -136,8 +136,9 @@ export class VerificaCadastro{
     const dataAtual = new Date();
     const dataMaior18 = new Date(dataNasc.getUTCFullYear() + 18, dataNasc.getUTCMonth(), dataNasc.getUTCDate());
 
-    console.log(dataAtual.toLocaleDateString(), dataMaior18.toLocaleDateString());
-    console.log(dataMaior18 <= dataAtual);
+    if (dataMaior18 > dataAtual) {
+      this.criaErro(campo, "Data inválida. Menor de 18 anos.");
+    }
 
     return dataMaior18 <= dataAtual; /* 1900 -> 1918 <= 2024*/
   }

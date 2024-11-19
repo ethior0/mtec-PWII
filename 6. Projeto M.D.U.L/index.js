@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path'; // Importando path
 
-import { inserirUsuario } from './DAO/insertUsuario.js'; 
+import { inserirUsuario } from './DAO/insertUsuario.js';
 
 const porta = 3000;
 const app = express();
@@ -27,14 +27,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/login", (req, res) => {
-  res.render("login");
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro");
 });
 
 // Rota para inserir usuário
-app.post('/login', async (req, res) => {
+app.post('/cadastro', async (req, res) => {
   const { email, senha, repeteSenha, nome, telefone, dataNascimento} = req.body;
-  console.log("Req body:", req.body);
   try {
     const resultado = await inserirUsuario(email, senha, nome, telefone, dataNascimento);
     res.json({ message: 'Usuário inserido com sucesso!', resultado });
@@ -43,6 +42,14 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Erro ao inserir usuário.', error: err.message });
   }
 });
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+// app.post('/login', async (req, res) => {
+//   const { email, senha } = req.body;
+// });
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'cadastro-usuario.html'));
