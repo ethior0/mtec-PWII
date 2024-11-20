@@ -1,22 +1,23 @@
-class VerificaLogin {
+export class VerificaLogin {
   constructor() {
     console.log("Iniciei a verificação do login");
   }
 
-  verificaTelaLogin(email, senha) {
-    const camposValidos = this.verificaCamposValidos(email, senha);
+  verificaTelaLogin(inputs) {
+    const camposValidos = this.verificaCamposValidos(inputs);
 
     return camposValidos;
   }
 
-  verificaCamposValidos(...inputs) {
+  verificaCamposValidos(inputs) {
     for (let errorText of inputs.querySelectorAll(".error-text")) {
       errorText.remove();
     }
 
+    const inputsArray = inputs.querySelectorAll("input");
     let valid = true;
 
-    for (let campo of inputs) {
+    for (let campo of inputsArray) {
       const label = campo.previousElementSibling.innerText.slice(0, -1).trim();
 
       if (!campo.value) {
@@ -30,7 +31,6 @@ class VerificaLogin {
       if (campo.id === "login-senha") {
         if (!this.verificaSenha(campo)) valid = false;
       }
-
     }
 
     return valid;
@@ -49,8 +49,8 @@ class VerificaLogin {
     return true;
   }
 
-  verificaSenha(inputs) {
-    const senhaCampo = inputs.querySelector("#login-senha");
+  verificaSenha(campo) {
+    const senhaCampo = campo;
 
     if (senhaCampo.value.length < 6 || senhaCampo.value.length > 12) {
       this.criaErro(senhaCampo, "Senha precisa ter entre 6 e 12 caracteres.");

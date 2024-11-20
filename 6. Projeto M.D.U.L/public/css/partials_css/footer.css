@@ -32,6 +32,11 @@ footer p {
 
 .footer-1-header .redes-sociais a svg {
   color: var(--verde-claro);
+  transition: var(--transicao);
+}
+
+.footer-1-header .redes-sociais a svg:hover {
+  color: var(--verde-branco);
 }
 
 .footer-1-header .redes-sociais {
@@ -84,6 +89,12 @@ footer p {
 
   color: var(--verde-claro);
   font-size: 1.125rem;
+
+  transition: var(--transicao);
+}
+
+.footer-1-body a:hover {
+  color: var(--verde-branco);
 }
 
 /* Footer 2 */

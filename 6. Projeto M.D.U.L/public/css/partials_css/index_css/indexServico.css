@@ -1,5 +1,5 @@
-/* Serviços ---------------------------------------- */
-.servico {
+/* SERVIÇOS ---------------------------------------- */
+.servico-blank {
   width: 100%;
   height: 450px;
 
@@ -12,10 +12,10 @@
 
   background: linear-gradient(to bottom, var(--verde-padrao) 0, var(--verde-padrao) 33%, var(--verde-medio) 33%, var(--verde-medio) 66%, var(--verde-padrao) 66%, var(--verde-padrao) 100%);
 
-  margin: 4rem 0rem 4rem 0rem;
+  margin: 4rem 0rem 0rem 0rem;
 }
 
-.servico-card {
+.servico-info {
   width: 250px;
   height: 80%;
 
@@ -26,42 +26,136 @@
 
   padding: 2rem;
 
-  background-color: var(--card-servico);
+  background-color: var(--card-info);
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10rem;
 }
 
-.servico-card .icone {
+.servico-info .icone {
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
 
-.servico-card .verde {
+.servico-info .verde {
   background-color: var(--card-verde);
 }
 
-.servico-card .ciano {
+.servico-info .ciano {
   background-color: var(--card-ciano);
 }
 
-.servico-card .azul {
+.servico-info .azul {
   background-color: var(--card-azul);
 }
 
-.servico-card .servico-card-body {
+.servico-info .servico-info-body {
   text-align: center;
 }
 
-.servico-card .servico-card-body h5 {
+.servico-info .servico-info-body h5 {
   color: var(--verde-escuro);
   font-weight: 600;
   font-size: 4rem;
   margin: 0;
 }
 
-.servico-card .servico-card-body p {
+.servico-info .servico-info-body p {
   color: var(--cinza-escuro);
   font-size: 1.25rem;
   margin: 0;
+}
+
+/* SERVIÇOS SECTION ---------------------------------------- */
+
+.servico-list {
+  width: 100%;
+  text-align: center;
+
+  padding: 6rem var(--padding-x);
+  background-color: var(--cinza-claro);
+}
+
+.servico-list h1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 5rem;
+}
+
+.servico-list  h3 {
+  font-size: 2rem;
+  color: var(--cinza-escuro);
+
+  margin-bottom: 4rem;
+}
+
+.servico-cardlist {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.servico-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.verde-card {
+  background-color: var(--card-verde-claro);
+}
+
+.ciano-card {
+  background-color: var(--card-ciano-claro);
+}
+
+.azul-card {
+  background-color: var(--card-azul-claro);
+}
+
+.servico-card img {
+  width: 400px;
+}
+
+.servico-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem;
+  background-color: var(--verde-escuro);
+}
+
+.servico-card-body h5 {
+  color: var(--branco);
+}
+
+.servico-card-body p {
+  color: var(--cinza-claro);
+}
+
+.servico-card-body a {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  color: var(--preto);
+  text-align: center;
+  font-family: "Lobster", sans-serif;
+  font-size: 1.375rem;
+
+  padding: 0.5rem;
+
+  background-color: var(--verde-lima);
+  border-radius: 10px;
+
+  margin-top: 4rem;
+  transition: var(--transicao);
+}
+
+.servico-card-body a:hover {
+  background-color: var(--verde-lima-forte);
 }

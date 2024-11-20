@@ -26,7 +26,6 @@ class Cadastro {
 
     if (verificacao.verificaTela2(inputs2)) {
       this.adicionaInputCadastro();
-      console.log(this.cadastro);
 
       const data = {
         email: this.cadastro[0],
@@ -88,9 +87,9 @@ class Cadastro {
       this.btnCadastrar.classList.remove("hidden");
 
       /* Porquisse (arrumar depois) =) */
-      const msg = document.querySelector(".trocar-text");
-      msg.innerText = "";
-      this.btnMudarTela.innerHTML = "";
+      // const msg = document.querySelector(".trocar-text");
+      // msg.innerText = "";
+      // this.btnMudarTela.innerHTML = "";
     }
   }
 }

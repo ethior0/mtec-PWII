@@ -90,6 +90,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.25rem;
 
   color: var(--branco);
   font-family: "Lobster", sans-serif;

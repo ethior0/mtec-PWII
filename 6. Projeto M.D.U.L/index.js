@@ -6,6 +6,7 @@ import { dirname } from 'path';
 import path from 'path'; // Importando path
 
 import { inserirUsuario } from './DAO/insertUsuario.js';
+import { verificarUsuario } from './DAO/verificarUsuario.js';
 
 const porta = 3000;
 const app = express();
@@ -47,14 +48,16 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
-// app.post('/login', async (req, res) => {
-//   const { email, senha } = req.body;
-// });
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'cadastro-usuario.html'));
+app.post('/login', async (req, res) => {
+  const { email, senha } = req.body;
+  try {
+    const resultado = await verificarUsuario(email, senha);
+    res.json({ message: 'Usuário logado com sucesso!', resultado });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Erro ao logar usuário.', error: err.message });
+  }
 });
-
 
 app.listen(porta, () => {
   console.log(`Rodando na porta ${porta}`)

@@ -15,34 +15,35 @@ class Login {
 
   logar(e) {
     e.preventDefault();
+    const inputs = this.formularioLogin.querySelector(".inputs");
 
-    const emailLogin = this.formularioLogin.querySelector("#login-email");
-    const senhaLogin = this.formularioLogin.querySelector("#login-senha");
+    if (verificacao.verificaTelaLogin(inputs)) {
+      this.login.push(this.formularioLogin.querySelector("#login-email").value);
+      this.login.push(this.formularioLogin.querySelector("#login-senha").value);
 
-    if (verificacao.verificaTelaLogin(emailLogin, senhaLogin)) {
       const data = {
-        email: emailLogin,
-        senha: senhaLogin,
+        email: this.login[0],
+        senha: this.login[1],
       };
 
-      // fetch("/login", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // })
-      //   .then((response) => {
-      //     response.json();
-      //   })
-      //   .then((result) => {
-      //     alert("Login concluído");
-      //     console.log(result);
-      //   })
-      //   .catch((error) => {
-      //     console.error("Erro ao logar:", error);
-      //     alert("Erro no login.");
-      //   });
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          response.json();
+        })
+        .then((result) => {
+          alert("Login concluído");
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error("Erro ao logar:", error);
+          alert("Erro no login.");
+        });
     }
   }
 }
