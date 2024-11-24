@@ -34,7 +34,6 @@ app.set("view engine", "handlebars");
 app.get("/", (req, res) => {
   if (req.session.login) {
     const [user] = req.session.login;
-    console.log("User no index:", { user: user, auth: true});
     res.render("index", { user: user, auth: true});
   } else {
     res.render("index");
@@ -120,12 +119,25 @@ app.get("/perfil", (req, res) => {
   if (!req.session.login) {
     const msg = {
       mensagem: "Você precisa estar logado para acessar essa página!",
-      auth: false
+      auth: false,
     }
     res.render("error", { msg });
   } else {
     const [user] = req.session.login;
     res.render("perfil", { user: user });
+  }
+});
+
+app.get("/doacao", (req, res) => {
+  if (!req.session.login) {
+    const msg = {
+      mensagem: "Você precisa estar logado para acessar essa página!",
+      auth: false,
+    }
+    res.render("error", { msg });
+  } else {
+    const [user] = req.session.login;
+    res.render("doacao", { user: user, auth: true});
   }
 });
 
