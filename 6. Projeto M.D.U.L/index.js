@@ -33,8 +33,9 @@ app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
   if (req.session.login) {
-    const user = req.session.login;
-    res.render("index", user);
+    const [user] = req.session.login;
+    console.log("User no index:", { user: user, auth: true});
+    res.render("index", { user: user, auth: true});
   } else {
     res.render("index");
   }
@@ -43,7 +44,8 @@ app.get("/", (req, res) => {
 app.get("/cadastro", (req, res) => {
   if (req.session.login) {
     const msg = {
-      mensagem: "Você já está logado em uma conta!"
+      mensagem: "Você já está logado em uma conta!",
+      auth: true
     }
     res.render("error", { msg });
   } else {
@@ -77,7 +79,8 @@ app.post('/cadastro', async (req, res) => {
 app.get("/login", (req, res) => {
   if (req.session.login) {
     const msg = {
-      mensagem: "Você já está logado em uma conta!"
+      mensagem: "Você já está logado em uma conta!",
+      auth: true
     }
     res.render("error", { msg });
   } else {
@@ -111,6 +114,19 @@ app.post('/login', async (req, res) => {
 app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/");
+});
+
+app.get("/perfil", (req, res) => {
+  if (!req.session.login) {
+    const msg = {
+      mensagem: "Você precisa estar logado para acessar essa página!",
+      auth: false
+    }
+    res.render("error", { msg });
+  } else {
+    const [user] = req.session.login;
+    res.render("perfil", { user: user });
+  }
 });
 
 app.listen(porta, () => {

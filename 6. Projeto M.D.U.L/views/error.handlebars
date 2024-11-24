@@ -8,6 +8,8 @@
 
   <div class="section-buttons">
     <a class="btn-form" href="/">Voltar</a>
-    <a class="btn-form" href="/logout">Sair</a>
+    {{#if msg.auth}}
+      <a class="btn-form" href="/logout">Sair</a>
+    {{/if}}
   </div>
 </div>
