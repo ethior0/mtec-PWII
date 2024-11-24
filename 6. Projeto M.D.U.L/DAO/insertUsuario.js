@@ -9,9 +9,9 @@ export async function inserirUsuario(email, senha, nome, telefone, dataNasciment
     const [results] = await conn.query(query, data);
     console.log('Usuário inserido com sucesso:', results);
     await conn.end();
-    return results;
+    return true;
   } catch (err) {
     console.error('Erro ao inserir usuário:', err.message);
-    return err.message;
+    return false;
   }
 }

@@ -5,6 +5,7 @@ class Cadastro {
     this.formularioCadastro = document.querySelector(".formulario-cadastro");
     this.btnProximo = document.querySelector(".btn-proximo");
     this.btnCadastrar = document.querySelector(".btn-cadastro");
+    this.botaoModal = document.querySelector("#modal-button");
     this.cadastro = [];
 
     this.eventos();
@@ -43,26 +44,29 @@ class Cadastro {
         },
         body: JSON.stringify(data),
       })
-        .then((response) => {
-          response.json();
-        })
-        .then((result) => {
-          alert("Cadastro concluído");
-          console.log(result);
-        })
-        .catch((error) => {
-          console.error("Erro ao cadastrar:", error);
-          alert("Erro no cadastro.");
+      .then((response) => {
+        response.json().then((res) => {
+          this.ativarModal(res.title, res.message);
         });
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error("Erro ao cadastrar:", error);
+      });
+
+      this.cadastro = [];
     }
   }
 
   adicionaInputCadastro() {
     const inputs1 = this.formularioCadastro.querySelector(".inputs-1");
     const inputs2 = this.formularioCadastro.querySelector(".inputs-2");
-
     this.adicionaDadoCadastro(inputs1);
     this.adicionaDadoCadastro(inputs2);
+    this.limparInputs(inputs1);
+    this.limparInputs(inputs2);
   }
 
   adicionaDadoCadastro(inputs) {
@@ -85,12 +89,21 @@ class Cadastro {
 
       inputs2.classList.remove("hidden");
       this.btnCadastrar.classList.remove("hidden");
-
-      /* Porquisse (arrumar depois) =) */
-      // const msg = document.querySelector(".trocar-text");
-      // msg.innerText = "";
-      // this.btnMudarTela.innerHTML = "";
     }
+  }
+
+  limparInputs(inputs) {
+    for (const input of inputs.querySelectorAll("input")) {
+      input.value = "";
+    }
+  }
+
+  ativarModal(title, msg) {
+    this.botaoModal.click();
+    const titleModal = document.querySelector(".modal-title");
+    const bodyModal = document.querySelector(".modal-body");
+    titleModal.innerHTML = title;
+    bodyModal.innerHTML = msg;
   }
 }
 
