@@ -26,7 +26,7 @@ export const cadastroPost = async (req, res) => {
       });
     } else {
       res.json({
-        title: "Cadastro de usuário",
+        title: "Erro no cadastro",
         message: 'Erro. Este e-mail já está em uso. ❌'
       });
     }
