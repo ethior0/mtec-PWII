@@ -1,6 +1,6 @@
 import { VerificaLogin } from "./verificacao/verificaLogin.js";
 
-class Login {
+class LoginUser {
   constructor() {
     this.formularioLogin = document.querySelector(".formulario-login");
     this.botaoModal = document.querySelector("#modal-button");
@@ -27,7 +27,6 @@ class Login {
         email: this.login[0],
         senha: this.login[1],
       };
-      console.log(data);
 
       fetch("/login", {
         method: "POST",
@@ -67,4 +66,4 @@ class Login {
 }
 
 const verificacao = new VerificaLogin();
-const logar = new Login();
+const logar = new LoginUser();

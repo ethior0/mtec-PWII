@@ -29,6 +29,7 @@
 
 .barra-info-desc p {
   color: var(--cinza-claro);
+  font-size: 1.125rem;
   margin: 0;
 }
 

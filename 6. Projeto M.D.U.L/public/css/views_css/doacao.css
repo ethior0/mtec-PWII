@@ -8,86 +8,97 @@ body {
   background-color: var(--cinza-branco);
 }
 
-/* LOGIN ------------------------------------------------------- */
-.container-login {
-  width: 990px;
-
-  display: flex;
-  border-radius: 2rem;
-  overflow: hidden;
-
-  box-shadow: 0 8px 20px 4px rgba(0, 0, 0, 0.25);
-}
-
-/* Login parte esquerda */
-.login {
-  width: 50%;
+/* CADASTRO ------------------------------------------------------- */
+.container-doacao {
+  width: 900px;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  border-radius: 2rem;
 
   padding: 3rem;
+
   background-color: var(--branco);
+  box-shadow: 0 8px 20px 4px rgba(0, 0, 0, 0.25);
 }
 
-.login label {
+.doacao a img {
+  width: 54px;
+}
+
+.doacao .linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.doacao label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 
   color: var(--cinza-medio);
-  
-  margin-top: 1.5rem;
 }
 
-.login input {
+.doacao input {
   width: 100%;
 
   padding: 0.25rem 0.5rem;
-  
+
   background-color: var(--cinza-branco);
   border: none;
   border-bottom: 1px solid var(--cinza-medio);
+
+  margin-bottom: 2rem;
 }
 
-.login input::placeholder {
+.doacao input::placeholder {
   color: var(--cinza-medio);
   opacity: 0.5;
 }
 
-.login a img {
-  width: 54px;
-}
+.doacao textarea {
+  width: 100%;
 
-/* .login-body{
-  width: 90%;
-  margin: 0 auto;
-} */
+  padding: 0.25rem 0.5rem;
 
-.login-body-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--cinza-branco);
+  border: none;
+  border-bottom: 1px solid var(--cinza-medio);
 
   margin-bottom: 3rem;
 }
 
-.login-body-info h2 {
+.tipo-input, .sexo-input {
+  display: flex;
+  align-items: center;
+
+  padding: 0.25rem 0.5rem;
+
+  background-color: var(--cinza-branco);
+  border: none;
+  border-bottom: 1px solid var(--cinza-medio);
+
+  margin-bottom: 2rem;
+}
+
+.tipo-input input, .sexo-input input {
+  width: auto !important;
+  margin: 0rem 4rem 0rem 1rem;
+}
+
+.doacao-body-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.doacao-body-info h2 {
   font-family: "Lobster", sans-serif;
   text-align: center;
-}
-
-.login-body-info h5 {
-  color: var(--cinza-escuro);
-  font-size: 1.375rem;
-  text-align: center;
-
-  margin-bottom: 0;
-}
-
-form .btn-form {
-  margin-top: 4rem;
 }
 
 .btn-form {
@@ -111,38 +122,6 @@ form .btn-form {
 
 .btn-form:hover {
   background-color: var(--verde-medio);
-}
-
-.p-conta {
-  text-align: center;
-
-  margin-top: 6rem;
-  margin-bottom: 0rem;
-}
-
-.p-conta a {
-  color: var(--preto);
-  font-weight: 500;
-  text-decoration: underline !important;
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-/* Login parte direita */
-.login-img, .cadastro-img {
-  width: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--verde-padrao);
-}
-
-.login-img img, .cadastro-img img {
-  width: 500px;
 }
 
 /* CADASTRO ---------------------------------------------------- */

@@ -1,7 +1,108 @@
-<p>Opa aqui é o cadastro (doação) de animais</p>
+<link rel="stylesheet" href="css/views_css/doacao.css">
 
-{{#if auth}}
-  <p>Você está logado, ou seja você pode cadastrar animais</p>
-{{else}}
-  <p>Você não pode cadastrar animais</p>
-{{/if}}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Aviso!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn-form" href="/">Voltar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-doacao">
+
+  <div class="doacao">
+    <a href="/">
+      <img src="img/logo/logo-completa.png">
+    </a>
+
+    <div class="doacao-body">
+      <div class="doacao-body-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24"><path fill="#309279" d="M9.5 21q-1.071 0-1.785-.714Q7 19.57 7 18.5q0-.456-.043-.764t-.215-.478q-.17-.172-.478-.234t-.764-.063q-1.071 0-1.785-.695Q3 15.571 3 14.5t.715-1.785T5.5 12q.402 0 .762.102t.611.306q.27.211.625.211t.606-.25l4.188-4.188q.25-.25.289-.635t-.173-.673q-.185-.271-.297-.621T12 5.5q0-1.071.715-1.785Q13.429 3 14.5 3t1.786.715T17 5.5q0 .456.043.764t.215.478q.17.172.479.215T18.5 7q1.071 0 1.786.715Q21 8.429 21 9.5t-.714 1.786T18.5 12q-.402 0-.752-.111t-.621-.297q-.288-.192-.654-.163q-.365.029-.615.279l-4.15 4.15q-.25.25-.289.586t.135.645q.165.27.306.64q.14.369.14.771q0 1.071-.714 1.786Q10.57 21 9.5 21"/></svg>
+        <h2>Cadastrar animal!</h2>
+      </div>
+
+      <form action="/" method="post" class="formulario-doacao">
+
+        <div class="inputs">
+          <label for="nome">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><path fill="#8B8B8B" d="M9.5 21q-1.071 0-1.785-.714Q7 19.57 7 18.5q0-.456-.043-.764t-.215-.478q-.17-.172-.478-.234t-.764-.063q-1.071 0-1.785-.695Q3 15.571 3 14.5t.715-1.785T5.5 12q.402 0 .762.102t.611.306q.27.211.625.211t.606-.25l4.188-4.188q.25-.25.289-.635t-.173-.673q-.185-.271-.297-.621T12 5.5q0-1.071.715-1.785Q13.429 3 14.5 3t1.786.715T17 5.5q0 .456.043.764t.215.478q.17.172.479.215T18.5 7q1.071 0 1.786.715Q21 8.429 21 9.5t-.714 1.786T18.5 12q-.402 0-.752-.111t-.621-.297q-.288-.192-.654-.163q-.365.029-.615.279l-4.15 4.15q-.25.25-.289.586t.135.645q.165.27.306.64q.14.369.14.771q0 1.071-.714 1.786Q10.57 21 9.5 21"/></svg>
+            Nome do animal:
+          </label>
+          <input type="text" id="nome" placeholder="Ex.: Rex">
+
+          <label for="idade">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><g fill="none"><rect width="18" height="15" x="3" y="6" stroke="#8B8B8B" stroke-width="1.55" rx="2"/><path fill="#8B8B8B" d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z"/><path stroke="#8B8B8B" stroke-linecap="round" stroke-width="1.55" d="M7 3v3m10-3v3"/><rect width="4" height="2" x="7" y="12" fill="#8B8B8B" rx=".5"/><rect width="4" height="2" x="7" y="16" fill="#8B8B8B" rx=".5"/><rect width="4" height="2" x="13" y="12" fill="#8B8B8B" rx=".5"/><rect width="4" height="2" x="13" y="16" fill="#8B8B8B" rx=".5"/></g></svg>
+            Idade do animal:
+          </label>
+          <input type="number" id="idade" min="0" max="50" placeholder="Ex.: 5">
+
+          <label for="tipo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 16 16"><path fill="#8B8B8B" d="M4.66 15H3.641a2.641 2.641 0 0 1-1.93-4.445l.797-.855a2.176 2.176 0 0 0-.052-3.023l-.783-.783a.5.5 0 0 1 .707-.707l.782.783a3.176 3.176 0 0 1 .076 4.412l-.797.855A1.643 1.643 0 0 0 3.64 14h.503c-.002-.204-.001-.46.008-.752c.026-.76.11-1.783.35-2.814c.24-1.025.642-2.098 1.33-2.924c.613-.736 1.446-1.265 2.542-1.388V3.186A2.19 2.19 0 0 1 10.56 1c.508 0 .92.413.92.922v.483h1.177c.66 0 1.271.341 1.619.902l.435.702c.761 1.229-.068 2.804-1.475 2.905v6.532c0 .858-.695 1.554-1.553 1.554h-.553v-1.554a2.607 2.607 0 0 0-2.607-2.608h-.878a.5.5 0 0 0 0 1h.878c.887 0 1.607.72 1.607 1.608V15z"/></svg>
+            Tipo do animal:
+          </label>
+          <div class="tipo-input">
+            <label for="cachorro">Cachorro:</label>
+            <input type="radio" id="cachorro" name="tipo" value="cachorro">
+
+            <label for="gato">Gato:</label>
+            <input type="radio" id="gato" name="tipo" value="gato">
+
+            <label for="gato">Passaro:</label>
+            <input type="radio" id="gato" name="tipo" value="passaro">
+          </div>
+
+          <label for="especie">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 20 20"><path fill="#8B8B8B" d="M5.5 4.25c0-1.168.826-2.25 2-2.25s2 1.082 2 2.25s-.826 2.25-2 2.25s-2-1.082-2-2.25M3 4.5c-1.174 0-2 1.082-2 2.25S1.826 9 3 9s2-1.082 2-2.25S4.174 4.5 3 4.5m12 2.25c0-1.168.826-2.25 2-2.25s2 1.082 2 2.25S18.174 9 17 9s-2-1.082-2-2.25m-4.5-2.5c0-1.168.826-2.25 2-2.25s2 1.082 2 2.25s-.826 2.25-2 2.25s-2-1.082-2-2.25M4 14a6 6 0 0 1 12 0c0 .986-.504 1.753-1.21 2.255c-.697.495-1.601.745-2.485.745h-4.61c-.884 0-1.788-.25-2.484-.745C4.504 15.753 4 14.986 4 14"/></svg>
+            Especie do animal:
+          </label>
+          <input type="text" id="especie" placeholder="Ex.: Labrador Retriever (Cachorro)">
+
+          <label for="sexo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 32 32"><path fill="#8B8B8B" d="M22 3v2h3.563l-3.375 3.406A6.96 6.96 0 0 0 18 7c-1.87 0-3.616.74-4.938 2.063a6.94 6.94 0 0 0 .001 9.875c.87.87 1.906 1.495 3.062 1.812c.114-.087.242-.178.344-.28a3.45 3.45 0 0 0 .874-1.532a4.9 4.9 0 0 1-2.875-1.407C13.524 16.588 13 15.336 13 14s.525-2.586 1.47-3.53C15.412 9.523 16.664 9 18 9s2.587.525 3.53 1.47A4.96 4.96 0 0 1 23 14c0 .865-.245 1.67-.656 2.406c.096.516.156 1.058.156 1.594q0 .749-.125 1.47c.2-.163.378-.348.563-.532C24.26 17.614 25 15.87 25 14c0-1.53-.504-2.984-1.406-4.188L27 6.438V10h2V3zm-6.125 8.25c-.114.087-.242.178-.344.28c-.432.434-.714.96-.874 1.533c1.09.14 2.085.616 2.875 1.406c.945.943 1.47 2.195 1.47 3.53s-.525 2.586-1.47 3.53C16.588 22.477 15.336 23 14 23s-2.587-.525-3.53-1.47A4.95 4.95 0 0 1 9 18c0-.865.245-1.67.656-2.406A9 9 0 0 1 9.5 14q0-.748.125-1.47c-.2.163-.377.348-.563.533C7.742 14.384 7 16.13 7 18c0 1.53.504 2.984 1.406 4.188L6.72 23.875l-2-2l-1.44 1.406l2 2l-2 2l1.44 1.44l2-2l2 2l1.405-1.44l-2-2l1.688-1.686A6.93 6.93 0 0 0 14 25c1.87 0 3.616-.74 4.938-2.063C20.26 21.616 21 19.87 21 18s-.74-3.614-2.063-4.938c-.87-.87-1.906-1.495-3.062-1.812"/></svg>
+            Sexo do animal:
+          </label>
+          <div class="sexo-input">
+            <label for="macho">Macho:</label>
+            <input type="radio" id="macho" name="sexo" value="m">
+
+            <label for="femea">Fêmea:</label>
+            <input type="radio" id="femea" name="sexo" value="f">
+          </div>
+
+          <label for="traco">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24"><g fill="none"><path fill="#8B8B8B" d="M6 21h12c-1 0-3-.6-3-3v-2H3v2c0 2.4 2 3 3 3"/><path stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55" d="M5 13V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13c0 1-.6 3-3 3m0 0H6c-1 0-3-.6-3-3v-2h12v2c0 2.4 2 3 3 3M9 7h8m-8 4h4"/></g></svg>
+            Traços:
+          </label>
+          <textarea rows="3" id="traco" placeholder="Ex.: Pelagem dourada e orelhas grandes"></textarea>
+        </div>
+
+        <button type="submit" class="btn-form btn-doacao">
+          Cadastrar
+          <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="2rem" viewBox="0 0 12 24"><path fill="white" fill-rule="evenodd" d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Gambiarra pra pegar o código do user rsrs -->
+<p class="hidden cod-user">
+  {{user.codUser}}
+</p>
+
+<script type="module" src="doacaoAnimal.js"></script>

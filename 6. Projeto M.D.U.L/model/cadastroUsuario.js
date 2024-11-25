@@ -1,6 +1,6 @@
 import { VerificaCadastro } from "./verificacao/verificaCadastro.js";
 
-class Cadastro {
+class CadastroUser {
   constructor() {
     this.formularioCadastro = document.querySelector(".formulario-cadastro");
     this.btnProximo = document.querySelector(".btn-proximo");
@@ -65,17 +65,17 @@ class Cadastro {
     const inputs2 = this.formularioCadastro.querySelector(".inputs-2");
     this.adicionaDadoCadastro(inputs1);
     this.adicionaDadoCadastro(inputs2);
-    this.limparInputs(inputs1);
-    this.limparInputs(inputs2);
   }
 
   adicionaDadoCadastro(inputs) {
     for (const input of inputs.querySelectorAll("input")) {
       let inputValor = input.value;
-      if (input.id === "cadastro-tel")
+      if (input.id === "cadastro-tel") {
         inputValor = inputValor.replace(/\D/g, "");
+      }
       this.cadastro.push(inputValor);
     }
+    this.limparInputs(inputs);
   }
 
   trocarInputs() {
@@ -108,4 +108,4 @@ class Cadastro {
 }
 
 const verificacao = new VerificaCadastro();
-const cadastrar = new Cadastro();
+const cadastrar = new CadastroUser();

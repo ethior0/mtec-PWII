@@ -65,7 +65,3 @@
   color: var(--cinza-medio);
   font-size: 0.938rem;
 }
-
-.dropdown-item-email:hover {
-  color: var(--cinza-medio);
-}
